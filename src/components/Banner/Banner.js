@@ -4,22 +4,28 @@ import styled from 'react-emotion'
 const Container = styled('div')`
   height: 600px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  background-color: #3498db;
+  color: rgba(255, 255, 255, 0.9);
+`
+
+const BannerTitle = styled('div')`
+  font-size: 70px;
 `
 
 const BannerText = styled('div')`
-  font-size: 40px;
+  margin-top: 20px;
+  font-size: 30px;
 `
 
 class Banner extends Component {
   render () {
     return (
       <Container>
-        <BannerText>
-          dallin-christensen.github.io
-        </BannerText>
+        <BannerTitle>Dallin Christensen</BannerTitle>
+        <BannerText>Software Engineer</BannerText>
       </Container>
     )
   }

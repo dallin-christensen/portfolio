@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'react-emotion'
-import { Banner } from './components'
+import { Banner, Projects } from './components'
 
 const Container = styled('div')`
   padding: 0;
   margin: 0;
-  background-color: #fff;
   font-family: sans-serif;
 `
 
@@ -14,6 +13,7 @@ class App extends Component {
     return (
       <Container>
         <Banner />
+        <Projects />
       </Container>
     );
   }
