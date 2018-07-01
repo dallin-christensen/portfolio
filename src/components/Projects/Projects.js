@@ -7,15 +7,22 @@ const ProjectContainer = styled('div')`
   max-width: 1000px;
   border: 1px solid black;
   padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
 `
 
 function Project ({ name, website, github, description }) {
   return (
     <ProjectContainer>
-      <div>{name}</div>
-      <div>{website}</div>
-      <div>{github}</div>
-      <div>{description}</div>
+      <div>
+        <div style={{width: '200px', height: '200px', border: '1px solid black', marginRight: '10px'}}></div>
+      </div>
+      <div>
+        <div style={{}}>{name}</div>
+        <div>{website}</div>
+        <div>{github}</div>
+        <div>{description}</div>
+      </div>
     </ProjectContainer>
   )
 }
