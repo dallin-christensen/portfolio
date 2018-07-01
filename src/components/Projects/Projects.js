@@ -11,18 +11,46 @@ const ProjectContainer = styled('div')`
   flex-flow: row nowrap;
 `
 
+const DataContainer = styled('div')`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+`
+
+const Anchor = styled('a')`
+  text-decoration: none;
+  color: white;
+`
+
+const LinkContainer = styled('div')`
+  background-color: #3498db;
+  width: 100px;
+  text-align: center;
+  padding: 10px 30px;
+  margin: 0 10px;
+  border-radius: 10px;
+`
+
 function Project ({ name, website, github, description }) {
   return (
     <ProjectContainer>
       <div>
         <div style={{width: '200px', height: '200px', border: '1px solid black', marginRight: '10px'}}></div>
       </div>
-      <div>
-        <div style={{}}>{name}</div>
-        <div>{website}</div>
-        <div>{github}</div>
-        <div>{description}</div>
-      </div>
+      <DataContainer>
+        <div style={{fontSize: '40px'}}>{name}</div>
+        <div style={{display: 'flex'}}>
+          {
+            website
+              ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
+              : null
+          }
+          <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
+        </div>
+        <div style={{maxWidth: '700px'}}>{description}</div>
+      </DataContainer>
     </ProjectContainer>
   )
 }
