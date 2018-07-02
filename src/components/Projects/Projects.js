@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
+import spotartify_gif from './images/spotartify_gif.gif'
 
 const ProjectContainer = styled('div')`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 90%;
   max-width: 1000px;
-  border: 1px solid black;
   padding: 10px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #999;
+  align-items: center;
 `
 
 const DataContainer = styled('div')`
@@ -33,24 +37,34 @@ const LinkContainer = styled('div')`
   border-radius: 10px;
 `
 
-function Project ({ name, website, github, description }) {
+const ProjectImg = styled('img')`
+  width: 240px;
+  border-radius: 20px;
+`
+
+function Project ({ name, website, github, description, imgSrc }) {
   return (
     <ProjectContainer>
-      <div>
-        <div style={{width: '200px', height: '200px', border: '1px solid black', marginRight: '10px'}}></div>
-      </div>
-      <DataContainer>
-        <div style={{fontSize: '40px'}}>{name}</div>
-        <div style={{display: 'flex'}}>
-          {
-            website
-              ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
-              : null
-          }
-          <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
+      <div style={{fontSize: '40px'}}>{name}</div>
+      <div style={{display: 'flex', flexFlow: 'row nowrap', justifyContent: 'space-around', alignItems: 'center', width: '100%' }}>
+        <div>
+          {/* <div style={{width: '200px', height: '200px', border: '1px solid black', marginRight: '10px'}}>
+            {image}
+          </div> */}
+          <ProjectImg src={imgSrc} alt={name} />
         </div>
-        <div style={{maxWidth: '700px'}}>{description}</div>
-      </DataContainer>
+        <DataContainer>
+          <div style={{display: 'flex'}}>
+            {
+              website
+                ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
+                : null
+            }
+            <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
+          </div>
+          <div style={{maxWidth: '700px'}}>{description}</div>
+        </DataContainer>
+      </div>
     </ProjectContainer>
   )
 }
@@ -72,17 +86,20 @@ export class Projects extends Component {
         website: 'https://spotartify.firebaseapp.com/',
         github: 'https://github.com/dallin-christensen/albumspot-ify',
         description: 'This single-page application allows the user to play their Spotify playlists while matching album artwork with the currently playing track. Uses Spotify API to retrieve user, playlist, and track data, and the Spotify SDK beta to play and control the music.',
+        imgSrc: spotartify_gif,
       },
       coingander: {
         name: 'Coingander',
         website: 'https://coingander.firebaseapp.com/',
         github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
         description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
+        imgSrc: spotartify_gif,
       },
       reactCountdown: {
         name: 'React-Countdown',
         github: 'https://github.com/dallin-christensen/react-countdown',
         description: 'A customizable countdown component for React. My contribution was to allow the countdown component to accept arrays of dates, switch to the next countdown date when the current one hits zero, and run a new callback function when dates switch.',
+        imgSrc: spotartify_gif,
       }
     }
   }
