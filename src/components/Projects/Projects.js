@@ -10,7 +10,7 @@ const ProjectContainer = styled('div')`
   display: flex;
   flex-flow: column nowrap;
   background-color: #eee;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 1px 1px 10px #999;
   align-items: center;
 `
@@ -34,27 +34,19 @@ const LinkContainer = styled('div')`
   text-align: center;
   padding: 10px 30px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 `
 
 const ProjectImg = styled('img')`
   width: 240px;
-  border-radius: 20px;
+  border-radius: 3px;
 `
 
 function Project ({ name, website, github, description, imgSrc }) {
   return (
     <ProjectContainer>
-      <div style={{fontSize: '40px'}}>{name}</div>
-      <div style={{display: 'flex', flexFlow: 'row nowrap', justifyContent: 'space-around', alignItems: 'center', width: '100%' }}>
-        <div>
-          {/* <div style={{width: '200px', height: '200px', border: '1px solid black', marginRight: '10px'}}>
-            {image}
-          </div> */}
-          <ProjectImg src={imgSrc} alt={name} />
-        </div>
-        <DataContainer>
-          <div style={{display: 'flex'}}>
+      <div style={{fontSize: '40px', marginBottom: '10px'}}>{name}</div>
+      <div style={{display: 'flex'}}>
             {
               website
                 ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
@@ -62,6 +54,11 @@ function Project ({ name, website, github, description, imgSrc }) {
             }
             <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
           </div>
+      <div style={{display: 'flex', flexFlow: 'row nowrap', justifyContent: 'space-around', alignItems: 'center', width: '100%' }}>
+        <div>
+          <ProjectImg src={imgSrc} alt={name} />
+        </div>
+        <DataContainer>
           <div style={{maxWidth: '700px'}}>{description}</div>
         </DataContainer>
       </div>
