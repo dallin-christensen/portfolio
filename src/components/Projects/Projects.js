@@ -3,16 +3,18 @@ import styled from 'react-emotion'
 import spotartify_gif from './images/spotartify_gif.gif'
 
 const ProjectContainer = styled('div')`
-  margin-bottom: 40px;
-  width: 90%;
-  max-width: 1000px;
+  margin-bottom: 80px;
+  width: 100%;
+  max-width: 800px;
   padding: 10px;
   display: flex;
-  flex-flow: column nowrap;
-  background-color: #eee;
-  border-radius: 3px;
-  box-shadow: 1px 1px 10px #999;
+  flex-flow: row wrap;
+  justify-content: space-around;
   align-items: center;
+`
+
+const ImgContainer = styled('div')`
+  padding: 5px;
 `
 
 const DataContainer = styled('div')`
@@ -20,7 +22,8 @@ const DataContainer = styled('div')`
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 350px;
+  padding: 5px;
 `
 
 const Anchor = styled('a')`
@@ -30,7 +33,7 @@ const Anchor = styled('a')`
 
 const LinkContainer = styled('div')`
   background-color: #3498db;
-  width: 100px;
+  width: 80px;
   text-align: center;
   padding: 10px 30px;
   margin: 0 10px;
@@ -38,30 +41,28 @@ const LinkContainer = styled('div')`
 `
 
 const ProjectImg = styled('img')`
-  width: 240px;
+  width: 300px;
   border-radius: 3px;
 `
 
 function Project ({ name, website, github, description, imgSrc }) {
   return (
     <ProjectContainer>
-      <div style={{fontSize: '40px', marginBottom: '10px'}}>{name}</div>
-      <div style={{display: 'flex'}}>
-            {
-              website
-                ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
-                : null
-            }
-            <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
-          </div>
-      <div style={{display: 'flex', flexFlow: 'row nowrap', justifyContent: 'space-around', alignItems: 'center', width: '100%' }}>
-        <div>
+        <ImgContainer>
           <ProjectImg src={imgSrc} alt={name} />
-        </div>
+        </ImgContainer>
         <DataContainer>
-          <div style={{maxWidth: '700px'}}>{description}</div>
+          <div style={{fontSize: '40px', marginBottom: '10px'}}>{name}</div>
+          <div style={{display: 'flex', marginBottom: '10px'}}>
+              {
+                website
+                  ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
+                  : null
+              }
+              <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
+          </div>
+          <div style={{maxWidth: '500px', textAlign: 'center'}}>{description}</div>
         </DataContainer>
-      </div>
     </ProjectContainer>
   )
 }
