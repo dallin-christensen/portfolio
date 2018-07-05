@@ -1,7 +1,16 @@
 {
   "main.css": "static/css/main.7411b904.css",
   "main.css.map": "static/css/main.7411b904.css.map",
-  "main.js": "static/js/main.5ccc8fb3.js",
-  "main.js.map": "static/js/main.5ccc8fb3.js.map",
-  "static/media/spotartify_gif.gif": "static/media/spotartify_gif.73eb02ba.gif"
+  "main.js": "static/js/main.f1218cce.js",
+  "main.js.map": "static/js/main.f1218cce.js.map",
+  "static/media/es6.jpg": "static/media/es6.4c5b19ae.jpg",
+  "static/media/gitlab.png": "static/media/gitlab.b0a8091b.png",
+  "static/media/graphQL.png": "static/media/graphQL.762edb84.png",
+  "static/media/jest.png": "static/media/jest.a52ed6ec.png",
+  "static/media/react.png": "static/media/react.84d44aff.png",
+  "static/media/reactNative.png": "static/media/reactNative.a921dde8.png",
+  "static/media/redux.png": "static/media/redux.f18023dc.png",
+  "static/media/sass.png": "static/media/sass.74c36290.png",
+  "static/media/spotartify_gif.gif": "static/media/spotartify_gif.73eb02ba.gif",
+  "static/media/yarn.jpg": "static/media/yarn.b826fa4f.jpg"
 }
