@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
-import spotartify_gif from './images/spotartify_gif.gif'
+import { getProjects } from '../../utils/helpers'
 
 const ProjectContainer = styled('div')`
   margin-bottom: 80px;
@@ -77,32 +77,8 @@ const ProjectsContainer = styled('div')`
 `
 
 export class Projects extends Component {
-  state ={
-    projects: {
-      spotartify: {
-        name: 'Spotart-ify',
-        website: 'https://spotartify.firebaseapp.com/',
-        github: 'https://github.com/dallin-christensen/albumspot-ify',
-        description: 'This single-page application allows the user to play their Spotify playlists while matching album artwork with the currently playing track. Uses Spotify API to retrieve user, playlist, and track data, and the Spotify SDK beta to play and control the music.',
-        imgSrc: spotartify_gif,
-      },
-      coingander: {
-        name: 'Coingander',
-        website: 'https://coingander.firebaseapp.com/',
-        github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
-        description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
-        imgSrc: spotartify_gif,
-      },
-      reactCountdown: {
-        name: 'React-Countdown',
-        github: 'https://github.com/dallin-christensen/react-countdown',
-        description: 'A customizable countdown component for React. My contribution was to allow the countdown component to accept arrays of dates, switch to the next countdown date when the current one hits zero, and run a new callback function when dates switch.',
-        imgSrc: spotartify_gif,
-      }
-    }
-  }
   render() {
-    const { projects } = this.state
+    const projects = getProjects()
     return (
       <ProjectsContainer>
         {
