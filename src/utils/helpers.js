@@ -9,7 +9,8 @@ import gitImg from '../components/Skills/images/git.png'
 // import gitlabImg from '../components/Skills/images/gitlab.png'
 import jestImg from '../components/Skills/images/jest.png'
 import enzymeImg from '../components/Skills/images/enzyme.jpeg'
-import sassImg from '../components/Skills/images/sass.png'
+// import sassImg from '../components/Skills/images/sass.png'
+import reactEmotionImg from '../components/Skills/images/reactEmotion.png'
 import yarnImg from '../components/Skills/images/yarn.jpg'
 
 import spotartify_gif from '../components/Projects/images/spotartify_gif.gif'
@@ -28,10 +29,6 @@ export function getSkills () {
       name: 'React JS',
       img: reactImg,
     },
-    reactNative: {
-      name: 'React Native',
-      img: reactNativeImg,
-    },
     redux: {
       name: 'Redux',
       img: reduxImg,
@@ -39,6 +36,10 @@ export function getSkills () {
     graphQl: {
       name: 'Graph QL',
       img: graphQLImg,
+    },
+    reactNative: {
+      name: 'React Native',
+      img: reactNativeImg,
     },
     git: {
       name: 'Git',
@@ -60,9 +61,13 @@ export function getSkills () {
       name: 'Enzyme',
       img: enzymeImg,
     },
-    sass: {
-      name: 'SASS',
-      img: sassImg,
+    // sass: {
+    //   name: 'SASS',
+    //   img: sassImg,
+    // },
+    reactEmotion: {
+      name: 'React Emotion',
+      img: reactEmotionImg,
     },
     yarn: {
       name: 'Yarn',

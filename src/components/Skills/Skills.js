@@ -12,6 +12,10 @@ const IconContainer = styled('div')`
   justify-content: center;
   align-items: center;
   margin: 20px;
+  transition: all .1s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 const IconImg = styled('div')`
@@ -22,9 +26,10 @@ const IconImg = styled('div')`
   background-size: cover;
 `
 
-function SkillIcon ({ img }) {
+function SkillIcon ({ img, name }) {
+  console.log(name)
   return (
-    <IconContainer>
+    <IconContainer title={name}>
       <IconImg img={img}>
       </IconImg>
     </IconContainer>
@@ -33,12 +38,12 @@ function SkillIcon ({ img }) {
 
 const Container = styled('div')`
   width: 100%;
-  background-color: #3498db;
   padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  background-color: #2c3e50;
 `
 
 const SkillsContainer = styled('div')`
@@ -60,7 +65,7 @@ class Skills extends Component {
             Object.keys(skills).map(skillsKey => {
               const skill = skills[skillsKey]
               return (
-                <SkillIcon img={skill.img} />
+                <SkillIcon img={skill.img} name={skill.name} />
               )
             })
           }
