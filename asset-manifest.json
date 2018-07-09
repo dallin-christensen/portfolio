@@ -1,14 +1,14 @@
 {
   "main.css": "static/css/main.7411b904.css",
   "main.css.map": "static/css/main.7411b904.css.map",
-  "main.js": "static/js/main.05a8c345.js",
-  "main.js.map": "static/js/main.05a8c345.js.map",
-  "static/media/graphQL.png": "static/media/graphQL.762edb84.png",
+  "main.js": "static/js/main.27bef552.js",
+  "main.js.map": "static/js/main.27bef552.js.map",
+  "static/media/graphQL.png": "static/media/graphQL.f0721786.png",
   "static/media/jest.png": "static/media/jest.a52ed6ec.png",
   "static/media/react.png": "static/media/react.84d44aff.png",
-  "static/media/reactNative.png": "static/media/reactNative.a921dde8.png",
-  "static/media/redux.png": "static/media/redux.f18023dc.png",
-  "static/media/sass.png": "static/media/sass.74c36290.png",
+  "static/media/reactEmotion.png": "static/media/reactEmotion.a76dfa0d.png",
+  "static/media/reactNative.png": "static/media/reactNative.b60bf583.png",
+  "static/media/redux.png": "static/media/redux.de1b27a2.png",
   "static/media/spotartify_gif.gif": "static/media/spotartify_gif.73eb02ba.gif",
   "static/media/yarn.jpg": "static/media/yarn.b826fa4f.jpg"
 }
