@@ -43,7 +43,7 @@ const Container = styled('div')`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background-color: #2c3e50;
+  background-color: #222f3e;
 `
 
 const SkillsContainer = styled('div')`

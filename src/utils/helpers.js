@@ -5,22 +5,20 @@ import reactNativeImg from '../components/Skills/images/reactNative.png'
 import reduxImg from '../components/Skills/images/redux.png'
 import graphQLImg from '../components/Skills/images/graphQL.png'
 import gitImg from '../components/Skills/images/git.png'
-// import githubImg from '../components/Skills/images/github.png'
-// import gitlabImg from '../components/Skills/images/gitlab.png'
+import githubImg from '../components/Skills/images/github.png'
+import gitlabImg from '../components/Skills/images/gitlab.png'
 import jestImg from '../components/Skills/images/jest.png'
 import enzymeImg from '../components/Skills/images/enzyme.jpeg'
-// import sassImg from '../components/Skills/images/sass.png'
+import sassImg from '../components/Skills/images/sass.png'
 import reactEmotionImg from '../components/Skills/images/reactEmotion.png'
 import yarnImg from '../components/Skills/images/yarn.jpg'
+import webpackImg from '../components/Skills/images/webpack.png'
+import firebaseImg from '../components/Skills/images/firebase.png'
 
 import spotartify_gif from '../components/Projects/images/spotartify_gif.gif'
 
 export function getSkills () {
   return {
-    // js: {
-    //   name: 'Javascript',
-    //   img: jsImg,
-    // },
     es6: {
       name: 'ES6',
       img: es6Img,
@@ -45,14 +43,14 @@ export function getSkills () {
       name: 'Git',
       img: gitImg,
     },
-    // github: {
-    //   name: 'Github',
-    //   img: githubImg
-    // },
-    // gitlab: {
-    //   name: 'Gitlab',
-    //   img: gitlabImg,
-    // },
+    github: {
+      name: 'Github',
+      img: githubImg
+    },
+    gitlab: {
+      name: 'Gitlab',
+      img: gitlabImg,
+    },
     jest: {
       name: 'jest',
       img: jestImg,
@@ -61,17 +59,25 @@ export function getSkills () {
       name: 'Enzyme',
       img: enzymeImg,
     },
-    // sass: {
-    //   name: 'SASS',
-    //   img: sassImg,
-    // },
     reactEmotion: {
       name: 'React Emotion',
       img: reactEmotionImg,
     },
+    sass: {
+      name: 'SASS',
+      img: sassImg,
+    },
     yarn: {
       name: 'Yarn',
       img: yarnImg,
+    },
+    webpack: {
+      name: 'Webpack',
+      img: webpackImg,
+    },
+    firebase: {
+      name: 'Firebase',
+      img: firebaseImg,
     },
   }
 }

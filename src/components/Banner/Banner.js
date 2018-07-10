@@ -8,7 +8,7 @@ const Container = styled('div')`
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  background-color: #3498db;
+  background-color: #00a8ff;
   color: rgba(255, 255, 255, 0.9);
 `
 
