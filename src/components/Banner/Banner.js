@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import Icon from '../Icon/Icon'
+import { blue } from '../../utils/colors'
 
 const Container = styled('div')`
   height: 600px;
@@ -8,7 +9,7 @@ const Container = styled('div')`
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  background-color: #00a8ff;
+  background-color: ${blue};
   color: rgba(255, 255, 255, 0.9);
 `
 

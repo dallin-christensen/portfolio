@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { getProjects } from '../../utils/helpers'
+import { blue } from '../../utils/colors'
 
 const ProjectContainer = styled('div')`
   margin-bottom: 80px;
@@ -32,7 +33,7 @@ const Anchor = styled('a')`
 `
 
 const LinkContainer = styled('div')`
-  background-color: #3498db;
+  background-color: ${blue};
   width: 80px;
   text-align: center;
   padding: 10px 30px;
