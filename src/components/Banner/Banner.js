@@ -16,24 +16,29 @@ const Container = styled('div')`
 const BannerTitle = styled('div')`
   width: 600px;
   font-size: 70px;
+  z-index: 1;
 `
 
 const BannerText = styled('div')`
   width: 600px;
   margin-top: 20px;
   font-size: 30px;
+  z-index: 1;
+  color: ${blue};
 `
 
 class Banner extends Component {
   render () {
     return (
       <Container>
-        <div style={{width: '250px', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{width: '250px', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', top: '25%', zIndex: 1}}>
           <Icon fontSize='140px' />
         </div>
-        <div>
+        <div style={{position: 'relative', top: '25%', zIndex: 2}}>
           <BannerTitle>Dallin Christensen</BannerTitle>
           <BannerText>Software Engineer | Front-End Developer</BannerText>
+        </div>
+        <div style={{width: '100%', height: '50%', backgroundColor: '#fff', position: 'relative', top: '20px'}}>
         </div>
       </Container>
     )
