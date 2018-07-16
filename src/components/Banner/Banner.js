@@ -4,42 +4,53 @@ import Icon from '../Icon/Icon'
 import { blue } from '../../utils/colors'
 
 const Container = styled('div')`
-  height: 600px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: ${blue};
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
 `
 
 const BannerTitle = styled('div')`
-  width: 600px;
   font-size: 70px;
-  z-index: 1;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: ${blue};
 `
 
 const BannerText = styled('div')`
-  width: 600px;
-  margin-top: 20px;
+  width: 100%;
+  height: 150px;
   font-size: 30px;
-  z-index: 1;
   color: ${blue};
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+`
+
+const IconContainer = styled('div')`
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 125px;
 `
 
 class Banner extends Component {
   render () {
     return (
       <Container>
-        <div style={{width: '250px', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', top: '25%', zIndex: 1}}>
-          <Icon fontSize='140px' />
-        </div>
-        <div style={{position: 'relative', top: '25%', zIndex: 2}}>
-          <BannerTitle>Dallin Christensen</BannerTitle>
-          <BannerText>Software Engineer | Front-End Developer</BannerText>
-        </div>
-        <div style={{width: '100%', height: '50%', backgroundColor: '#fff', position: 'relative', top: '20px'}}>
-        </div>
+          <BannerTitle>
+            <IconContainer>
+              <Icon fontSize='140px' />
+            </IconContainer>
+            <span>Dallin Christensen</span>
+          </BannerTitle>
+          <BannerText>
+            <div style={{width: '250px'}}></div>
+            <span>Software Engineer | Front-End Developer</span>
+          </BannerText>
       </Container>
     )
   }

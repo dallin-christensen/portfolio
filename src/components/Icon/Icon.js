@@ -22,7 +22,7 @@ const IconContainer = styled('div')`
 
 function Icon ({ fontSize }) {
   return (
-    <Circle widthHeight='85%' backgroundColor='rgba(255, 255, 255, 0.9)'>
+    <Circle widthHeight='85%' backgroundColor='#fff'>
       <Circle widthHeight='90%' backgroundColor='#2ecc71' style={{marginLeft: 'auto', marginRight: 'auto', fontSize, }}>
         <IconContainer>
           <div style={{position: 'relative', right: '10px', top: '-12px'}}>{'{'}</div>
