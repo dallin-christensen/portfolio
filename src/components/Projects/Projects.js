@@ -16,6 +16,12 @@ const ProjectContainer = styled('div')`
 
 const ImgContainer = styled('div')`
   padding: 5px;
+  width: 300px;
+  height: 230px;
+  background: url("${props => props.image}");
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
 `
 
 const DataContainer = styled('div')`
@@ -41,16 +47,11 @@ const LinkContainer = styled('div')`
   border-radius: 3px;
 `
 
-const ProjectImg = styled('img')`
-  width: 300px;
-  border-radius: 3px;
-`
-
 function Project ({ name, website, github, description, imgSrc }) {
   return (
     <ProjectContainer>
-        <ImgContainer>
-          <ProjectImg src={imgSrc} alt={name} />
+        <ImgContainer image={imgSrc}>
+          {/* <ProjectImg src={imgSrc} alt={name} /> */}
         </ImgContainer>
         <DataContainer>
           <div style={{fontSize: '40px', marginBottom: '10px'}}>{name}</div>

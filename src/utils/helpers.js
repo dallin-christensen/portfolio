@@ -16,6 +16,8 @@ import webpackImg from '../components/Skills/images/webpack.png'
 import firebaseImg from '../components/Skills/images/firebase.png'
 
 import spotartify_gif from '../components/Projects/images/spotartify_gif.gif'
+import coingander_gif from '../components/Projects/images/coinGander.gif'
+import octoCat from '../components/Projects/images/Octocat.png'
 
 export function getSkills () {
   return {
@@ -96,13 +98,13 @@ export function getProjects () {
       website: 'https://coingander.firebaseapp.com/',
       github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
       description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
-      imgSrc: spotartify_gif,
+      imgSrc: coingander_gif,
     },
     reactCountdown: {
       name: 'React-Countdown',
       github: 'https://github.com/dallin-christensen/react-countdown',
       description: 'A customizable countdown component for React. My contribution was to allow the countdown component to accept arrays of dates, switch to the next countdown date when the current one hits zero, and run a new callback function when dates switch.',
-      imgSrc: spotartify_gif,
+      imgSrc: octoCat,
     }
   }
 }
