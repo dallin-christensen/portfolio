@@ -8,9 +8,9 @@ const Container = styled('div')`
 `
 
 const BannerTitle = styled('div')`
-  font-size: 70px;
+  flex-wrap: wrap;
   width: 100%;
-  height: 300px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -18,13 +18,24 @@ const BannerTitle = styled('div')`
 `
 
 const BannerText = styled('div')`
+  flex-wrap: wrap;
   width: 100%;
   height: 150px;
-  font-size: 30px;
   color: ${blue};
   background-color: #fff;
   display: flex;
   justify-content: center;
+  @media (max-width: 615px) {
+    align-items: flex-start;
+    height: 50px;
+  }
+`
+
+const PageTitle = styled('span')`
+  font-size: 70px;
+  @media (max-width: 818px) {
+    font-size: 45px;
+  }
 `
 
 const IconContainer = styled('div')`
@@ -35,6 +46,24 @@ const IconContainer = styled('div')`
   align-items: center;
   position: relative;
   top: 125px;
+  @media (max-width: 615px) {
+    top: 0;
+  }
+`
+
+const SubTitle = styled('div')`
+  margin-top: 3px;
+  font-size: 30px;
+  @media (max-width: 818px) {
+    font-size: 20px;
+  }
+`
+
+const IconWidthPlaceholder = styled('div')`
+  width: 248px;
+  @media (max-width: 615px) {
+    display: none;
+  }
 `
 
 class Banner extends Component {
@@ -45,11 +74,11 @@ class Banner extends Component {
             <IconContainer>
               <Icon fontSize='140px' />
             </IconContainer>
-            <span>Dallin Christensen</span>
+            <PageTitle>Dallin Christensen</PageTitle>
           </BannerTitle>
           <BannerText>
-            <div style={{width: '250px'}}></div>
-            <span>Software Engineer | Front-End Developer</span>
+            <IconWidthPlaceholder />
+            <SubTitle>Software Engineer | Front-End Developer</SubTitle>
           </BannerText>
       </Container>
     )
