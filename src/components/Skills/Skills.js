@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { getSkills } from '../../utils/helpers'
+import { lightGrey } from '../../utils/colors'
 
 const IconContainer = styled('div')`
   padding: 5px;
@@ -12,9 +13,10 @@ const IconContainer = styled('div')`
   justify-content: center;
   align-items: center;
   margin: 20px;
+  border: 4px solid ${lightGrey};
   transition: all .1s ease-in-out;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
   }
 `
 
@@ -38,12 +40,11 @@ function SkillIcon ({ img, name }) {
 
 const Container = styled('div')`
   width: 100%;
-  padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background-color: #222f3e;
+  background-color: ${lightGrey};
 `
 
 const SkillsContainer = styled('div')`
@@ -53,6 +54,8 @@ const SkillsContainer = styled('div')`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: -100px;
 `
 
 class Skills extends Component {

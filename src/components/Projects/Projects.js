@@ -70,8 +70,7 @@ function Project ({ name, website, github, description, imgSrc }) {
 }
 
 const ProjectsContainer = styled('div')`
-  padding: 20px;
-  padding-top: 80px;
+  padding: 80px 20px 200px 20px;
   display: flex;
   justify-content: center;
   align-items: center;

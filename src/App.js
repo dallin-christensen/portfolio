@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'react-emotion'
-import { Banner, Projects, Skills } from './components'
+import { Banner, Projects, Skills, Footer } from './components'
 
 const Container = styled('div')`
   padding: 0;
@@ -15,6 +15,7 @@ class App extends Component {
         <Banner />
         <Projects />
         <Skills />
+        <Footer />
       </Container>
     );
   }
