@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://dallin-christensen.github.io/portfolio/",
+  "homepage": "http://dallin-christensen.github.io/portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-emotion": "^9.2.4",
+    "react-icons": "^2.2.7",
     "react-scripts": "1.1.4"
   },
   "scripts": {
