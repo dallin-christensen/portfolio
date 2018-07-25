@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { getProjects } from '../../utils/helpers'
-import { blue } from '../../utils/colors'
+import { blue, grey, lightBlue } from '../../utils/colors'
 
 const ProjectContainer = styled('div')`
   margin-bottom: 80px;
@@ -45,16 +45,21 @@ const LinkContainer = styled('div')`
   padding: 10px 30px;
   margin: 0 10px;
   border-radius: 3px;
+  transition: all .1s ease-in-out;
+  &:hover {
+    background-color: ${lightBlue};
+    transform: scale(1.1);
+  }
 `
 
 function Project ({ name, website, github, description, imgSrc }) {
   return (
     <ProjectContainer>
-        <ImgContainer image={imgSrc}>
-          {/* <ProjectImg src={imgSrc} alt={name} /> */}
-        </ImgContainer>
+        <Anchor href={github}>
+          <ImgContainer image={imgSrc} />
+        </Anchor>
         <DataContainer>
-          <div style={{fontSize: '40px', marginBottom: '10px'}}>{name}</div>
+          <div style={{fontSize: '35px', marginBottom: '10px', color: grey}}>{name.toUpperCase()}</div>
           <div style={{display: 'flex', marginBottom: '10px'}}>
               {
                 website
@@ -63,7 +68,7 @@ function Project ({ name, website, github, description, imgSrc }) {
               }
               <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
           </div>
-          <div style={{maxWidth: '500px', textAlign: 'center'}}>{description}</div>
+          <div style={{maxWidth: '500px', textAlign: 'center', color: grey}}>{description}</div>
         </DataContainer>
     </ProjectContainer>
   )
