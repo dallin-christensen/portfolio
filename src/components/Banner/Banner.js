@@ -25,7 +25,7 @@ const BannerText = styled('div')`
   background-color: #fff;
   display: flex;
   justify-content: center;
-  @media (max-width: 615px) {
+  @media (max-width: 612px) {
     align-items: flex-start;
     height: 50px;
   }
@@ -35,6 +35,9 @@ const PageTitle = styled('span')`
   font-size: 70px;
   @media (max-width: 818px) {
     font-size: 45px;
+  }
+  @media (max-width: 612px) {
+    font-size: 46px;
   }
 `
 
@@ -46,7 +49,7 @@ const IconContainer = styled('div')`
   align-items: center;
   position: relative;
   top: 125px;
-  @media (max-width: 615px) {
+  @media (max-width: 612px) {
     top: 0;
   }
 `
@@ -57,11 +60,14 @@ const SubTitle = styled('div')`
   @media (max-width: 818px) {
     font-size: 20px;
   }
+  @media (max-width: 612px) {
+    font-size: 21px;
+  }
 `
 
 const IconWidthPlaceholder = styled('div')`
   width: 248px;
-  @media (max-width: 615px) {
+  @media (max-width: 612px) {
     display: none;
   }
 `

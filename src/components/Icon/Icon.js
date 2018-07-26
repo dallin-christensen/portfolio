@@ -23,6 +23,7 @@ const Anchor = styled('a')`
   text-decoration: none;
   color: ${white};
   border-radius: 50%;
+  transform: rotate(-20deg);
 `
 
 const IconContainer = styled('div')`

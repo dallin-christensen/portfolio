@@ -16,8 +16,15 @@ const IconContainer = styled('div')`
   border: 4px solid ${lightGrey};
   transition: all .1s ease-in-out;
   &:hover {
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
+`
+
+const Anchor = styled('a')`
+  width: 100%;
+  height: 100%;
+  border-raidus: 50%;
+  text-decoration: none;
 `
 
 const IconImg = styled('div')`
@@ -28,12 +35,13 @@ const IconImg = styled('div')`
   background-size: cover;
 `
 
-function SkillIcon ({ img, name }) {
-  console.log(name)
+function SkillIcon ({ img, name, site }) {
   return (
     <IconContainer title={name}>
-      <IconImg img={img}>
-      </IconImg>
+      <Anchor href={site}>
+        <IconImg img={img}>
+        </IconImg>
+      </Anchor>
     </IconContainer>
   )
 }
@@ -66,9 +74,9 @@ class Skills extends Component {
         <SkillsContainer>
           {
             Object.keys(skills).map(skillsKey => {
-              const skill = skills[skillsKey]
+              const { img, name, site } = skills[skillsKey]
               return (
-                <SkillIcon img={skill.img} name={skill.name} />
+                <SkillIcon img={img} name={name} site={site} />
               )
             })
           }

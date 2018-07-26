@@ -33,6 +33,26 @@ const DataContainer = styled('div')`
   padding: 5px;
 `
 
+const Title = styled('div')`
+  font-size: 35px;
+  marginBottom: 10px;
+  color: ${grey};
+  @media (max-width: 818px) {
+    margin-top: 30px;
+  }
+`
+
+const ButtonsContainer = styled('div')`
+  display: flex;
+  margin-bottom: 10px;
+`
+
+const Description = styled('div')`
+  max-width: 500px;
+  text-align: center;
+  color: ${grey};
+`
+
 const Anchor = styled('a')`
   text-decoration: none;
   color: white;
@@ -59,16 +79,16 @@ function Project ({ name, website, github, description, imgSrc }) {
           <ImgContainer image={imgSrc} />
         </Anchor>
         <DataContainer>
-          <div style={{fontSize: '35px', marginBottom: '10px', color: grey}}>{name.toUpperCase()}</div>
-          <div style={{display: 'flex', marginBottom: '10px'}}>
+          <Title>{name.toUpperCase()}</Title>
+          <ButtonsContainer>
               {
                 website
                   ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
                   : null
               }
               <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
-          </div>
-          <div style={{maxWidth: '500px', textAlign: 'center', color: grey}}>{description}</div>
+          </ButtonsContainer>
+          <Description>{description}</Description>
         </DataContainer>
     </ProjectContainer>
   )

@@ -24,62 +24,77 @@ export function getSkills () {
     es6: {
       name: 'ES6',
       img: es6Img,
+      site: 'https://www.ecma-international.org/ecma-262/6.0/',
     },
     react: {
       name: 'React JS',
       img: reactImg,
+      site: 'https://reactjs.org/',
     },
     redux: {
       name: 'Redux',
       img: reduxImg,
+      site: 'https://redux.js.org/',
     },
     graphQl: {
       name: 'Graph QL',
       img: graphQLImg,
+      site: 'https://graphql.org/',
     },
     reactNative: {
       name: 'React Native',
       img: reactNativeImg,
+      site: 'https://facebook.github.io/react-native/',
     },
     git: {
       name: 'Git',
       img: gitImg,
+      site: 'https://git-scm.com/',
     },
     github: {
       name: 'Github',
-      img: githubImg
+      img: githubImg,
+      site: 'https://github.com/',
     },
     gitlab: {
       name: 'Gitlab',
       img: gitlabImg,
+      site: 'https://gitlab.com/',
     },
     jest: {
       name: 'jest',
       img: jestImg,
+      site: 'https://jestjs.io/',
     },
     enzyme: {
       name: 'Enzyme',
       img: enzymeImg,
+      site: 'https://airbnb.io/enzyme/',
     },
     reactEmotion: {
       name: 'React Emotion',
       img: reactEmotionImg,
+      site: 'https://emotion.sh/',
     },
     sass: {
       name: 'SASS',
       img: sassImg,
+      site: 'https://sass-lang.com/',
     },
     yarn: {
       name: 'Yarn',
       img: yarnImg,
+      site: 'https://yarnpkg.com/lang/en/',
     },
     webpack: {
       name: 'Webpack',
       img: webpackImg,
+      site: 'https://webpack.js.org/',
     },
     firebase: {
       name: 'Firebase',
       img: firebaseImg,
+      site: 'https://firebase.google.com/',
     },
   }
 }
