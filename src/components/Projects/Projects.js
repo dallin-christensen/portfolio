@@ -37,7 +37,7 @@ const Title = styled('div')`
   font-size: 35px;
   marginBottom: 10px;
   color: ${grey};
-  @media (max-width: 818px) {
+  @media (max-width: 709px) {
     margin-top: 30px;
   }
 `
