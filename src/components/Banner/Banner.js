@@ -39,6 +39,9 @@ const PageTitle = styled('span')`
   @media (max-width: 612px) {
     font-size: 46px;
   }
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
 `
 
 const IconContainer = styled('div')`
@@ -62,6 +65,9 @@ const SubTitle = styled('div')`
   }
   @media (max-width: 612px) {
     font-size: 21px;
+  }
+  @media (max-width: 500px) {
+    font-size: 18px;
   }
 `
 
