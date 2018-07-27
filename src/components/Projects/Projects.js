@@ -4,7 +4,7 @@ import { getProjects } from '../../utils/helpers'
 import { blue, grey, lightBlue } from '../../utils/colors'
 
 const ProjectContainer = styled('div')`
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   width: 100%;
   max-width: 800px;
   padding: 10px;
@@ -37,8 +37,10 @@ const Title = styled('div')`
   font-size: 35px;
   marginBottom: 10px;
   color: ${grey};
+  margin-bottom: 20px;
   @media (max-width: 709px) {
-    margin-top: 30px;
+    margin-top: 40px;
+    font-size: 30px;
   }
 `
 
