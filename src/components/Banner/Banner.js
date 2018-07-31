@@ -33,6 +33,7 @@ const BannerText = styled('div')`
 
 const PageTitle = styled('span')`
   font-size: 70px;
+  cursor: default;
   @media (max-width: 818px) {
     font-size: 45px;
   }
@@ -60,6 +61,7 @@ const IconContainer = styled('div')`
 const SubTitle = styled('div')`
   margin-top: 3px;
   font-size: 30px;
+  cursor: default;
   @media (max-width: 818px) {
     font-size: 20px;
   }
