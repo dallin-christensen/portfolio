@@ -79,7 +79,43 @@ const IconWidthPlaceholder = styled('div')`
 `
 
 class Banner extends Component {
+  state = {
+    subTitle: 'Software Engineer | Front-End Developer',
+    showingSub: '',
+    step: 0,
+    forwards: true,
+  }
+  componentDidMount () {
+    this.typeEffect()
+  }
+  findNextSubTitle = () => { //dont worry for now, first type effect
+    const subTitles = [
+      'Software Engineer',
+      'Front-End Developer',
+    ]
+
+    const { subTitle } = this.state
+
+    return subTitles.find((title, i) => {
+      if (i+1 === subTitles.length && title === subTitle ) return title
+      return title === subTitle && subTitles[i+1]
+    })
+  }
+  typeEffect = () => {
+    const { showingSub, step, forwards } = this.state
+    this.setState({step: step + 1}, () => {
+      const { step: newStep, subTitle } = this.state
+      setTimeout(() => {
+        const newShowing = subTitle.slice(0, newStep)
+        this.setState({showingSub: newShowing}, () => {
+          if (newShowing === subTitle) return
+          this.typeEffect()
+        })
+      }, (Math.random() * 200) + 50)
+    })
+  }
   render () {
+    const { showingSub } = this.state
     return (
       <Container>
           <BannerTitle>
@@ -90,7 +126,7 @@ class Banner extends Component {
           </BannerTitle>
           <BannerText>
             <IconWidthPlaceholder />
-            <SubTitle>Software Engineer | Front-End Developer</SubTitle>
+            <SubTitle>{showingSub}</SubTitle>
           </BannerText>
       </Container>
     )
