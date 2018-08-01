@@ -60,16 +60,16 @@ const IconContainer = styled('div')`
 
 const SubTitle = styled('div')`
   margin-top: 3px;
-  font-size: 30px;
+  font-size: 40px;
   cursor: default;
   @media (max-width: 818px) {
-    font-size: 20px;
+    font-size: 30px;
   }
   @media (max-width: 612px) {
-    font-size: 21px;
+    font-size: 31px;
   }
   @media (max-width: 500px) {
-    font-size: 18px;
+    font-size: 28px;
   }
 `
 
@@ -80,9 +80,11 @@ const IconWidthPlaceholder = styled('div')`
   }
 `
 
+//TODO: figure out how to make IconWidthPlaceholder directly beneath the icon always
+
 class Banner extends Component {
   state = {
-    subTitle: 'Software Engineer | Front-End Developer',
+    subTitle_i: 0,
     showingSub: '',
     step: 0,
     forwards: true,
@@ -90,30 +92,37 @@ class Banner extends Component {
   componentDidMount () {
     this.typeEffect()
   }
-  findNextSubTitle = () => { //dont worry for now, first type effect
+  typeEffect = () => {
+    const { step, forwards } = this.state
+
     const subTitles = [
+      'JavaScript',
+      'Functional Programming',
+      'React + React Native',
+      'Front-End Development',
       'Software Engineer',
-      'Front-End Developer',
     ]
 
-    const { subTitle } = this.state
+    const { subTitle_i } = this.state
+    const subTitle = subTitles[subTitle_i]
 
-    return subTitles.find((title, i) => {
-      if (i+1 === subTitles.length && title === subTitle ) return title
-      return title === subTitle && subTitles[i+1]
-    })
-  }
-  typeEffect = () => {
-    const { showingSub, step, forwards } = this.state
-    this.setState({step: step + 1}, () => {
-      const { step: newStep, subTitle } = this.state
-      setTimeout(() => {
-        const newShowing = subTitle.slice(0, newStep)
-        this.setState({showingSub: newShowing}, () => {
-          if (newShowing === subTitle) return
-          this.typeEffect()
+    this.setState({step: forwards ? step + 1 : step - 1}, () => { // sets step one forward
+      const { step: newStep } = this.state
+      setTimeout(() => { // setTimeout gives it typing style effect, otherwise too quick
+        const newShowing = subTitle.slice(0, newStep) // slice off subtitle according to step
+        this.setState({showingSub: newShowing}, () => { // set new showingSub
+          if(newShowing === subTitle && newShowing === subTitles[subTitles.length - 1]) return
+          if (newShowing === subTitle) {
+            setTimeout(() => {
+              this.setState({ forwards: false }, () => this.typeEffect())
+            }, 500)
+          } else if (newShowing === '') {
+            this.setState({ forwards: true, subTitle_i: subTitle_i + 1 }, () => this.typeEffect())
+          } else {
+            this.typeEffect()
+          }
         })
-      }, (Math.random() * 200) + 50)
+      }, forwards ? (Math.random() * 120) + 50 : 40)
     })
   }
   render () {
