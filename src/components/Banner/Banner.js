@@ -19,13 +19,18 @@ const BannerTitle = styled('div')`
 
 const BannerText = styled('div')`
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 813px;
+  margin: 0 auto;
   height: 150px;
   color: ${blue};
   background-color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  @media (max-width: 818px) {
+    max-width: 612px;
+  }
   @media (max-width: 612px) {
+    justify-content: center;
     align-items: flex-start;
     height: 50px;
   }
@@ -60,6 +65,7 @@ const IconContainer = styled('div')`
 
 const SubTitle = styled('div')`
   margin-top: 3px;
+  padding-left: 2px;
   font-size: 40px;
   cursor: default;
   @media (max-width: 818px) {
@@ -74,34 +80,49 @@ const SubTitle = styled('div')`
 `
 
 const IconWidthPlaceholder = styled('div')`
-  width: 248px;
+  width: 250px;
   @media (max-width: 612px) {
     display: none;
   }
 `
 
-//TODO: figure out how to make IconWidthPlaceholder directly beneath the icon always
+const Cursor = styled('span')`
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+`
+
+const getSubtitles = () => [
+  'JavaScript',
+  'Functional Programming',
+  'React & React Native',
+  'Front-End Development',
+  'Software Engineer',
+]
+
+// TODO: figure out how to make IconWidthPlaceholder directly beneath the icon always
 
 class Banner extends Component {
   state = {
     subTitle_i: 0,
     showingSub: '',
+    showCursor: true,
     step: 0,
     forwards: true,
   }
   componentDidMount () {
     this.typeEffect()
   }
+  toggleCursor = () => {
+    const { showCursor } = this.state
+    setTimeout(() => {
+      this.setState({ showCursor: !showCursor })
+    }, 400)
+  }
   typeEffect = () => {
     const { step, forwards } = this.state
 
-    const subTitles = [
-      'JavaScript',
-      'Functional Programming',
-      'React + React Native',
-      'Front-End Development',
-      'Software Engineer',
-    ]
+    const subTitles = getSubtitles()
 
     const { subTitle_i } = this.state
     const subTitle = subTitles[subTitle_i]
@@ -115,7 +136,7 @@ class Banner extends Component {
           if (newShowing === subTitle) {
             setTimeout(() => {
               this.setState({ forwards: false }, () => this.typeEffect())
-            }, 500)
+            }, 1600)
           } else if (newShowing === '') {
             this.setState({ forwards: true, subTitle_i: subTitle_i + 1 }, () => this.typeEffect())
           } else {
@@ -126,7 +147,9 @@ class Banner extends Component {
     })
   }
   render () {
-    const { showingSub } = this.state
+    const { showingSub, showCursor } = this.state
+    const subTitles = getSubtitles()
+    if (showingSub !== subTitles[subTitles.length - 1]) this.toggleCursor()
     return (
       <Container>
           <BannerTitle>
@@ -137,7 +160,10 @@ class Banner extends Component {
           </BannerTitle>
           <BannerText>
             <IconWidthPlaceholder />
-            <SubTitle>{showingSub}</SubTitle>
+            <SubTitle>
+              <span>{showingSub}</span>
+              <Cursor>{ showingSub === subTitles[subTitles.length - 1] ? '' : showCursor ? '|' : '' }</Cursor>
+            </SubTitle>
           </BannerText>
       </Container>
     )
