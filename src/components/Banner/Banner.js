@@ -100,8 +100,6 @@ const getSubtitles = () => [
   'Software Engineer',
 ]
 
-// TODO: figure out how to make IconWidthPlaceholder directly beneath the icon always
-
 class Banner extends Component {
   state = {
     subTitle_i: 0,
