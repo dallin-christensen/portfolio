@@ -39,7 +39,6 @@ const IconImg = styled('div')`
 `
 
 const IconTitle = styled('div')`
-  background-color: rgba(0, 50, 120, 0.2);
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -47,8 +46,9 @@ const IconTitle = styled('div')`
   justify-content: center;
   align-items: center;
   color: ${white};
-  text-shadow: 1px 0 0 #333, 0 -1px 0 #333, 0 1px 0 #333, -1px 0 0 #333;
+  text-shadow: 1px 0 0 #555, 0 -1px 0 #555, 0 1px 0 #555, -1px 0 0 #555;
   font-size: 16px;
+  transition: all .9s ease-in-out;
 `
 
 

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-plugin-emotion": "^9.2.6",
     "emotion": "^9.2.4",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
