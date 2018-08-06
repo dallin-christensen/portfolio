@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { getSkills } from '../../utils/helpers'
-import { lightGrey } from '../../utils/colors'
+import { lightGrey, white } from '../../utils/colors'
 
 const IconContainer = styled('div')`
   padding: 5px;
@@ -33,18 +33,40 @@ const IconImg = styled('div')`
   border-radius: 50%;
   background: url(${props => props.img}) no-repeat center;
   background-size: cover;
+  &:hover div {
+    display: flex;
+  }
 `
+
+const IconTitle = styled('div')`
+  background-color: rgba(0, 50, 120, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: ${white};
+  text-shadow: 1px 0 0 #333, 0 -1px 0 #333, 0 1px 0 #333, -1px 0 0 #333;
+  font-size: 16px;
+`
+
 
 function SkillIcon ({ img, name, site }) {
   return (
-    <IconContainer title={name}>
+    <IconContainer>
       <Anchor href={site}>
         <IconImg img={img}>
+          <IconTitle>
+            {name}
+          </IconTitle>
         </IconImg>
       </Anchor>
     </IconContainer>
   )
 }
+
+// <span style={{width: '100%', backgroundColor: 'rgba(0, 120, 200, 0.2)'}}>
 
 const Container = styled('div')`
   width: 100%;
