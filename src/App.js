@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { Banner, Projects, Skills, Footer } from './components'
-import { blue } from './utils/colors'
 
 const Container = styled('div')`
   padding: 0;

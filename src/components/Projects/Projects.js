@@ -112,7 +112,7 @@ export class Projects extends Component {
         {
           Object.keys(projects).map(project => {
             const p = projects[project]
-            return <Project {...p} />
+            return <Project {...p} key={p.name} />
           })
         }
       </ProjectsContainer>

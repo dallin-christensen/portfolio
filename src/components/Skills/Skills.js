@@ -98,7 +98,7 @@ class Skills extends Component {
             Object.keys(skills).map(skillsKey => {
               const { img, name, site } = skills[skillsKey]
               return (
-                <SkillIcon img={img} name={name} site={site} />
+                <SkillIcon img={img} name={name} site={site} key={name} />
               )
             })
           }
