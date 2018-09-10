@@ -29,7 +29,7 @@ const DataContainer = styled('div')`
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 350px;
+  width: 440px;
   padding: 5px;
 `
 
@@ -38,7 +38,7 @@ const Title = styled('div')`
   marginBottom: 10px;
   color: ${grey};
   margin-bottom: 20px;
-  @media (max-width: 709px) {
+  @media (max-width: 799px) {
     margin-top: 40px;
     font-size: 30px;
   }

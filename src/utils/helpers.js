@@ -118,7 +118,13 @@ export function getProjects () {
     reactCountdown: {
       name: 'React-Countdown',
       github: 'https://github.com/dallin-christensen/react-countdown',
-      description: 'A customizable countdown component for React. My contribution was to allow the countdown component to accept arrays of dates, switch to the next countdown date when the current one hits zero, and run a new callback function when dates switch.',
+      description: 'Contributor to this project.',
+      imgSrc: octoCat,
+    },
+    reactTypingAnimation: {
+      name: 'React-Typing-Animation',
+      github: 'https://github.com/adamjking3/react-typing-animation',
+      description: 'Contributor to this project.',
       imgSrc: octoCat,
     }
   }
