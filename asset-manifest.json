@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.7411b904.css",
   "main.css.map": "static/css/main.7411b904.css.map",
-  "main.js": "static/js/main.aa6fff9c.js",
-  "main.js.map": "static/js/main.aa6fff9c.js.map",
+  "main.js": "static/js/main.cd84229f.js",
+  "main.js.map": "static/js/main.cd84229f.js.map",
   "static/media/Octocat.png": "static/media/Octocat.713d06c0.png",
   "static/media/coinGander.gif": "static/media/coinGander.5dc6ac38.gif",
   "static/media/firebase.png": "static/media/firebase.3e7f3e0d.png",
@@ -10,6 +10,7 @@
   "static/media/gitlab.png": "static/media/gitlab.8759b6d1.png",
   "static/media/graphQL.png": "static/media/graphQL.0c9dd1ce.png",
   "static/media/jest.png": "static/media/jest.6db0610e.png",
+  "static/media/keyboard.png": "static/media/keyboard.99a3467e.png",
   "static/media/react.png": "static/media/react.55951d75.png",
   "static/media/reactEmotion.png": "static/media/reactEmotion.5e83a9da.png",
   "static/media/reactNative.png": "static/media/reactNative.c55e2035.png",
