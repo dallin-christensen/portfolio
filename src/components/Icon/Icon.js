@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 import { white } from '../../utils/colors'
+import keyboardImage from './keyboard.png'
 
 const Circle = styled('div')`
   width: ${props => props.widthHeight ? props.widthHeight : '100%'};
@@ -24,7 +25,6 @@ const Anchor = styled('a')`
   text-decoration: none;
   color: ${white};
   border-radius: 50%;
-  transform: rotate(-20deg);
 `
 
 const IconContainer = styled('div')`
@@ -32,6 +32,11 @@ const IconContainer = styled('div')`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+`
+
+const IconImage = styled('img')`
+  width: 120px;
+  margin-top: -10px;
 `
 
 function Icon ({ fontSize }) {
@@ -46,9 +51,7 @@ function Icon ({ fontSize }) {
             marginRight: 'auto',
             fontSize,
           }}>
-          <IconContainer>
-            {'//'}
-          </IconContainer>
+            <IconImage src={keyboardImage} />
         </Circle>
       </Anchor>
     </Circle>
