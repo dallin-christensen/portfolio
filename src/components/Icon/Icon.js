@@ -1,7 +1,29 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled, { keyframes } from 'react-emotion'
 import { white } from '../../utils/colors'
 import keyboardImage from './keyboard.png'
+
+const sinusoid = keyframes`
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(.2,.25,.55,1);
+    box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.2);;
+  }
+  25% {
+    transform: translateY(-5px);
+    animation-timing-function: cubic-bezier(.45,0,.8,.75);
+    box-shadow: 0px 13px 14px rgba(0, 0, 0, 0.2);;
+  }
+  75% {
+    transform: translateY(5px);
+    animation-timing-function: cubic-bezier(.45,0,.8,.75);
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);;
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.2);;
+  }
+`
 
 const Circle = styled('div')`
   width: ${props => props.widthHeight ? props.widthHeight : '100%'};
@@ -27,30 +49,25 @@ const Anchor = styled('a')`
   border-radius: 50%;
 `
 
-const IconContainer = styled('div')`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-`
-
 const IconImage = styled('img')`
   width: 120px;
   margin-top: -10px;
+  animation-delay: -.2s;
 `
 
 function Icon ({ fontSize }) {
   return (
-    <Circle widthHeight='85%' backgroundColor='#fff'>
+    <Circle widthHeight='85%' backgroundColor='#fff' style={{ animation: `${sinusoid} 3s ease infinite` }}>
       <Anchor href='.' widthHeight='90%'>
         <Circle
           backgroundColor='#2ecc71'
-          pattern
+          pattern='true'
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',
             fontSize,
-          }}>
+          }}
+          >
             <IconImage src={keyboardImage} />
         </Circle>
       </Anchor>
