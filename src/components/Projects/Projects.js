@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { getProjects } from '../../utils/helpers'
 import { blue, grey, lightBlue } from '../../utils/colors'
+import { FaStar } from 'react-icons/fa'
 
 const ProjectContainer = styled('div')`
   margin-bottom: 60px;
@@ -37,11 +38,16 @@ const Title = styled('div')`
   font-size: 35px;
   marginBottom: 10px;
   color: ${grey};
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   @media (max-width: 799px) {
     margin-top: 40px;
     font-size: 30px;
   }
+`
+
+const StarCount = styled('div')`
+  margin-bottom: 10px;
+  color: ${grey};
 `
 
 const ButtonsContainer = styled('div')`
@@ -74,30 +80,50 @@ const LinkContainer = styled('div')`
   }
 `
 
-function Project ({ name, website, github, description, imgSrc }) {
-  return (
-    <ProjectContainer>
-        <Anchor href={github}>
-          <ImgContainer image={imgSrc} />
-        </Anchor>
-        <DataContainer>
-          <Title>{name.toUpperCase()}</Title>
-          <ButtonsContainer>
-              {
-                website
-                  ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
-                  : null
-              }
-              <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
-          </ButtonsContainer>
-          <Description>{description}</Description>
-        </DataContainer>
-    </ProjectContainer>
-  )
+class Project extends Component {
+  state = { starCount: 0 }
+  componentDidMount() {
+    this.getStars()
+  }
+
+  getStars = async () => {
+    const { dataUri } = this.props
+    const starCount = await fetch(dataUri)
+      .then(response => response.json())
+      .then(repoData => repoData.stargazers_count)
+      .catch(console.warn)
+
+    this.setState({ starCount })
+  }
+
+  render() {
+    const { name, website, github, description, imgSrc } = this.props
+    const { starCount } = this.state
+    return (
+      <ProjectContainer>
+          <Anchor href={github}>
+            <ImgContainer image={imgSrc} />
+          </Anchor>
+          <DataContainer>
+            <Title>{name.toUpperCase()}</Title>
+            <StarCount><FaStar color={grey} /> {starCount}</StarCount>
+            <ButtonsContainer>
+                {
+                  website
+                    ? <Anchor href={website}><LinkContainer>website</LinkContainer></Anchor>
+                    : null
+                }
+                <Anchor href={github}><LinkContainer>code</LinkContainer></Anchor>
+            </ButtonsContainer>
+            <Description>{description}</Description>
+          </DataContainer>
+      </ProjectContainer>
+    )
+  }
 }
 
 const ProjectsContainer = styled('div')`
-  padding: 80px 20px 200px 20px;
+  padding: 80px 20px 150px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
