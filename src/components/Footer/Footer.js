@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import { darkGrey, white } from '../../utils/colors'
-import { FaGithubAlt, FaLinkedin } from 'react-icons/lib/fa'
+import { FaGithubAlt, FaLinkedin } from 'react-icons/fa'
 
 const Container = styled('div')`
   height: 300px;
