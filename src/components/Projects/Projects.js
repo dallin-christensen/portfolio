@@ -3,6 +3,7 @@ import styled from 'react-emotion'
 import { getProjects } from '../../utils/helpers'
 import { blue, grey, lightBlue } from '../../utils/colors'
 import { FaStar } from 'react-icons/fa'
+import abbrev from 'number-abbreviate'
 
 const ProjectContainer = styled('div')`
   margin-bottom: 60px;
@@ -106,7 +107,7 @@ class Project extends Component {
           </Anchor>
           <DataContainer>
             <Title>{name.toUpperCase()}</Title>
-            <StarCount><FaStar color={grey} /> {starCount}</StarCount>
+            <StarCount><FaStar color={grey} /> {abbrev(starCount, 1)}</StarCount>
             <ButtonsContainer>
                 {
                   website

@@ -109,18 +109,10 @@ export function getProjects () {
       description: 'This single-page application allows the user to play their Spotify playlists while matching album artwork with the currently playing track. Uses Spotify API to retrieve user, playlist, and track data, and the Spotify SDK beta to play and control the music.',
       imgSrc: spotartify_gif,
     },
-    coingander: {
-      name: 'Coingander',
-      website: 'https://coingander.firebaseapp.com/',
-      github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
-      dataUri: 'https://api.github.com/repos/dallin-christensen/crypto-currency-tracker',
-      description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
-      imgSrc: coingander_gif,
-    },
-    reactCountdown: {
-      name: 'React-Countdown',
-      github: 'https://github.com/dallin-christensen/react-countdown',
-      dataUri: 'https://api.github.com/repos/ndresx/react-countdown',
+    materialUi: {
+      name: 'Material-UI',
+      github: 'https://github.com/mui-org/material-ui',
+      dataUri: 'https://api.github.com/repos/mui-org/material-ui',
       description: 'Contributor to this project.',
       imgSrc: octoCat,
     },
@@ -130,6 +122,14 @@ export function getProjects () {
       dataUri: 'https://api.github.com/repos/adamjking3/react-typing-animation',
       description: 'Contributor to this project.',
       imgSrc: octoCat,
-    }
+    },
+    coingander: {
+      name: 'Coingander',
+      website: 'https://coingander.firebaseapp.com/',
+      github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
+      dataUri: 'https://api.github.com/repos/dallin-christensen/crypto-currency-tracker',
+      description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
+      imgSrc: coingander_gif,
+    },
   }
 }
