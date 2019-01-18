@@ -116,10 +116,10 @@ export function getProjects () {
       description: 'Contributor to this project.',
       imgSrc: octoCat,
     },
-    reactTypingAnimation: {
-      name: 'React-Typing-Animation',
-      github: 'https://github.com/adamjking3/react-typing-animation',
-      dataUri: 'https://api.github.com/repos/adamjking3/react-typing-animation',
+    reactColor: {
+      name: 'React-Color',
+      github: 'https://github.com/casesandberg/react-color',
+      dataUri: 'https://api.github.com/repos/casesandberg/react-color',
       description: 'Contributor to this project.',
       imgSrc: octoCat,
     },
@@ -130,6 +130,13 @@ export function getProjects () {
       dataUri: 'https://api.github.com/repos/dallin-christensen/crypto-currency-tracker',
       description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
       imgSrc: coingander_gif,
+    },
+    reactTypingAnimation: {
+      name: 'React-Typing-Animation',
+      github: 'https://github.com/adamjking3/react-typing-animation',
+      dataUri: 'https://api.github.com/repos/adamjking3/react-typing-animation',
+      description: 'Contributor to this project.',
+      imgSrc: octoCat,
     },
   }
 }
