@@ -1,10 +1,8 @@
-// import jsImg from '../components/Skills/images/js.png'
-import es6Img from '../components/Skills/images/es6.jpg'
 import reactImg from '../components/Skills/images/react.png'
 import reactNativeImg from '../components/Skills/images/reactNative.png'
 import reduxImg from '../components/Skills/images/redux.png'
 import graphQLImg from '../components/Skills/images/graphQL.png'
-import gitImg from '../components/Skills/images/git.png'
+import apolloImg from '../components/Skills/images/apollo.png'
 import githubImg from '../components/Skills/images/github.png'
 import gitlabImg from '../components/Skills/images/gitlab.png'
 import jestImg from '../components/Skills/images/jest.png'
@@ -14,6 +12,7 @@ import reactEmotionImg from '../components/Skills/images/reactEmotion.png'
 import yarnImg from '../components/Skills/images/yarn.jpg'
 import webpackImg from '../components/Skills/images/webpack.png'
 import firebaseImg from '../components/Skills/images/firebase.png'
+import reactTestingLibImg from '../components/Skills/images/react-testing-library.png'
 
 import spotartify_gif from '../components/Projects/images/spotartify_gif.gif'
 import coingander_gif from '../components/Projects/images/coinGander.gif'
@@ -21,15 +20,15 @@ import octoCat from '../components/Projects/images/Octocat.png'
 
 export function getSkills () {
   return {
-    es6: {
-      name: 'ES6',
-      img: es6Img,
-      site: 'https://www.ecma-international.org/ecma-262/6.0/',
-    },
     react: {
       name: 'React JS',
       img: reactImg,
       site: 'https://reactjs.org/',
+    },
+    reactNative: {
+      name: 'React Native',
+      img: reactNativeImg,
+      site: 'https://facebook.github.io/react-native/',
     },
     redux: {
       name: 'Redux',
@@ -41,15 +40,10 @@ export function getSkills () {
       img: graphQLImg,
       site: 'https://graphql.org/',
     },
-    reactNative: {
-      name: 'React Native',
-      img: reactNativeImg,
-      site: 'https://facebook.github.io/react-native/',
-    },
-    git: {
-      name: 'Git',
-      img: gitImg,
-      site: 'https://git-scm.com/',
+    apollo: {
+      name: 'Apollo',
+      img: apolloImg,
+      site: 'https://www.apollographql.com/',
     },
     github: {
       name: 'Github',
@@ -70,6 +64,11 @@ export function getSkills () {
       name: 'Enzyme',
       img: enzymeImg,
       site: 'https://airbnb.io/enzyme/',
+    },
+    reactTestingLibrary: {
+      name: 'react-testing-library',
+      img: reactTestingLibImg,
+      site: 'https://github.com/kentcdodds/react-testing-library',
     },
     reactEmotion: {
       name: 'React Emotion',
