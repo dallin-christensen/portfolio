@@ -14,9 +14,10 @@ import webpackImg from '../components/Skills/images/webpack.png'
 import firebaseImg from '../components/Skills/images/firebase.png'
 import reactTestingLibImg from '../components/Skills/images/react-testing-library.png'
 
-import spotartify_gif from '../components/Projects/images/spotartify_gif.gif'
-import coingander_gif from '../components/Projects/images/coinGander.gif'
-import octoCat from '../components/Projects/images/Octocat.png'
+import spotartify_gif from '../components/Contributions/images/spotartify_gif.gif'
+import coingander_gif from '../components/Contributions/images/coinGander.gif'
+import imgMarkup from '../components/Contributions/images/imgMarkup.gif'
+import octoCat from '../components/Contributions/images/Octocat.png'
 
 export function getSkills () {
   return {
@@ -100,42 +101,40 @@ export function getSkills () {
 
 export function getProjects () {
   return {
-    spotartify: {
-      name: 'Spotart-ify',
-      website: 'https://spotartify.firebaseapp.com/',
-      github: 'https://github.com/dallin-christensen/albumspot-ify',
-      dataUri: 'https://api.github.com/repos/dallin-christensen/albumspot-ify',
-      description: 'This single-page application allows the user to play their Spotify playlists while matching album artwork with the currently playing track. Uses Spotify API to retrieve user, playlist, and track data, and the Spotify SDK beta to play and control the music.',
-      imgSrc: spotartify_gif,
+    reactImgMarkup: {
+      name: 'React-Img-Markup',
+      github: 'https://github.com/dallin-christensen/react-img-markup',
+      dataUri: 'https://api.github.com/repos/dallin-christensen/react-img-markup',
+      description: 'Creator and mainainer',
+      imgSrc: imgMarkup,
     },
     materialUi: {
       name: 'Material-UI',
       github: 'https://github.com/mui-org/material-ui',
       dataUri: 'https://api.github.com/repos/mui-org/material-ui',
-      description: 'Contributor to this project.',
+      description: 'Contributor',
+      imgSrc: octoCat,
+    },
+    reactSelect: {
+      name: 'React-Select',
+      github: 'https://github.com/jedwatson/react-select',
+      dataUri: 'https://api.github.com/repos/jedwatson/react-select',
+      description: 'Contributor',
       imgSrc: octoCat,
     },
     reactColor: {
       name: 'React-Color',
       github: 'https://github.com/casesandberg/react-color',
       dataUri: 'https://api.github.com/repos/casesandberg/react-color',
-      description: 'Contributor to this project.',
+      description: 'Contributor',
       imgSrc: octoCat,
     },
-    coingander: {
-      name: 'Coingander',
-      website: 'https://coingander.firebaseapp.com/',
-      github: 'https://github.com/dallin-christensen/crypto-currency-tracker',
-      dataUri: 'https://api.github.com/repos/dallin-christensen/crypto-currency-tracker',
-      description: 'Coingander displays the current market-cap, cost, and 24 hour percentage increase of the top 40 cryptocurrencies. Uses the CoinMarketCap API',
-      imgSrc: coingander_gif,
-    },
-    reactTypingAnimation: {
-      name: 'React-Typing-Animation',
-      github: 'https://github.com/adamjking3/react-typing-animation',
-      dataUri: 'https://api.github.com/repos/adamjking3/react-typing-animation',
-      description: 'Contributor to this project.',
-      imgSrc: octoCat,
-    },
+    // reactTypingAnimation: {
+    //   name: 'React-Typing-Animation',
+    //   github: 'https://github.com/adamjking3/react-typing-animation',
+    //   dataUri: 'https://api.github.com/repos/adamjking3/react-typing-animation',
+    //   description: 'Contributor to this project.',
+    //   imgSrc: octoCat,
+    // },
   }
 }

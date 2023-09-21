@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'react-emotion'
-import { white } from '../../utils/colors'
+import { white, green } from '../../utils/colors'
 import keyboardImage from './keyboard.png'
 
 const sinusoid = keyframes`
@@ -60,7 +60,7 @@ function Icon ({ fontSize }) {
     <Circle widthHeight='85%' backgroundColor='#fff' style={{ animation: `${sinusoid} 3s ease infinite` }}>
       <Anchor href='.' widthHeight='90%'>
         <Circle
-          backgroundColor='#2ecc71'
+          backgroundColor={green}
           pattern='true'
           style={{
             marginLeft: 'auto',
